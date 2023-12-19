@@ -1,0 +1,31 @@
+// colors
+$clr-primary: #3d00b7;
+$clr-secondary: #000000;
+$clr-success: #00ac4f;
+$general-text-color: #636363;
+
+/* primary / nav / default - WHAT?! */
+// $font-family-primary: "Open Sans", sans-serif;
+// $font-family-nav:     Roboto, sans-serif;
+// $font-family-default: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+/* base font size - applied at body / html level */
+$fs-base: 16px;
+
+/* larger than heading font sizes */
+$fs-giga: 40px;
+$fs-mega: 32px;
+$fs-kilo: 20px;
+
+/* heading font sizes */
+$fs-h1: 36px;
+$fs-h2: 32px;
+$fs-h3: 28px;
+$fs-h4: 24px;
+$fs-h5: 20px;
+$fs-h6: 18px;
+
+/* smaller than heading font sizes */
+$fs-milli: 14px;
+$fs-micro: 10px;
+$fs-nano: 8px;
