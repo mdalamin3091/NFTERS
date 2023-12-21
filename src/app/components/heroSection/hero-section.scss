@@ -1,0 +1,15 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+.Hero__wrap {
+  @include grid($columns: repeat(5, 1fr), $column-gap: 40px);
+  padding-block: 56px 120px;
+
+  &--left-col {
+    grid-column: 1 / 4;
+    background-color: azure;
+  }
+  &--right-col {
+    grid-column: 4 / -1;
+    background-color: bisque;
+  }
+}

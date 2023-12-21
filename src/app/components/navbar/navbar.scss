@@ -1,0 +1,100 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.Navbar {
+  border-bottom: 1px solid #efefef;
+
+  &__wrap {
+    @include flex($alignItems: center, $justifyContent: space-between);
+    min-height: 78px;
+    height: 100%;
+
+    &--left {
+      @include flex(
+        $alignItems: center,
+        $justifyContent: space-between,
+        $gap: 60px
+      );
+    }
+
+    &--logo {
+      @include typography($size: 24px, $weight: 700);
+      text-transform: uppercase;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 47px;
+        background: #f4f4f4;
+        top: -5px;
+        right: -30px;
+      }
+    }
+
+    &--menu {
+      @include flex(
+        $alignItems: center,
+        $justifyContent: space-between,
+        $gap: 30px
+      );
+
+      li {
+        list-style: none;
+
+        a {
+          @include typography(
+            $size: 16px,
+            $weight: 500,
+            $color: $clr-secondary
+          );
+
+          letter-spacing: 0.64px;
+          position: relative;
+          transition: all ease 0.3s;
+
+          &::after {
+            content: "";
+            width: 0%;
+            height: 2px;
+            background-color: $clr-secondary;
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            transition: width 0.5s ease-in-out;
+          }
+
+          &:hover {
+            color: $clr-primary;
+            &::after {
+              width: 100%;
+              background-color: $clr-primary;
+            }
+          }
+        }
+      }
+    }
+
+    &--right {
+      @include flex(
+        $alignItems: center,
+        $justifyContent: space-between,
+        $gap: 20px
+      );
+
+      &-input {
+        @include flex($alignItems: center, $justifyContent: space-between);
+        border: 2px solid #efefef;
+        border-radius: 100px;
+        padding: 10px 12px;
+
+        input {
+          border: none;
+          @include typography($size: 16px, $weight: 500, $color: #c0c0c0);
+          letter-spacing: 0.64px;
+        }
+      }
+    }
+  }
+}

@@ -1,10 +1,11 @@
 import Image from "next/image";
-import styles from "./page.module.css";
+import HeroSection from "./components/heroSection";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <h1>In the name of Allah</h1>
+    <main className="container">
+      <HeroSection />
+      {/* <h1>In the name of Allah</h1> */}
       {/* <div className={styles.description}>
         <p>
           Get started by editing&nbsp;
